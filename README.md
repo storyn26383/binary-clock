@@ -2,7 +2,8 @@
 
 > Binary Clock using Vue.js
 
-![Binary Clock](https://i.imgur.com/W7AMfk1.png)
+![Binary Coded Decimal Mode](https://i.imgur.com/0mGAauL.png)
+![True Binary Mode](https://i.imgur.com/1wZFoY7.png)
 
 ## Build Setup
 
