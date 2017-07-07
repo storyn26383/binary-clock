@@ -1,11 +1,6 @@
 <template lang="pug">
   .true-binary-digit
-    light(:on="!!(number & 32)")
-    light(:on="!!(number & 16)")
-    light(:on="!!(number & 8)")
-    light(:on="!!(number & 4)")
-    light(:on="!!(number & 2)")
-    light(:on="!!(number & 1)")
+    light(:on="!!(number & (2 ** (6 - i)))", :key="i", v-for="i in 6")
 </template>
 
 <script>

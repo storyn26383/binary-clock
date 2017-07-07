@@ -1,15 +1,7 @@
 <template lang="pug">
   .binary-digit
-    .digit
-      light(:on="!!(tens & 8)")
-      light(:on="!!(tens & 4)")
-      light(:on="!!(tens & 2)")
-      light(:on="!!(tens & 1)")
-    .digit
-      light(:on="!!(ones & 8)")
-      light(:on="!!(ones & 4)")
-      light(:on="!!(ones & 2)")
-      light(:on="!!(ones & 1)")
+    .digit(:key="index", v-for="(digit, index) in [tens, ones]")
+      light(:on="!!(digit & (2 ** (4 - i)))", :key="i", v-for="i in 4")
 </template>
 
 <script>
