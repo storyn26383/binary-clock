@@ -1,6 +1,6 @@
 <template lang="pug">
-  .true-binary-digit
-    light(:on="!!(number & (2 ** (6 - i)))", :key="i", v-for="i in 6")
+  .binary-number
+    light(:on="!!(number & (2 ** (bit - i)))", :key="i", v-for="i in bit")
 </template>
 
 <script>
@@ -11,6 +11,10 @@
       Light
     },
     props: {
+      bit: {
+        type: Number,
+        required: true
+      },
       number: {
         type: Number,
         required: true
@@ -20,7 +24,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .binary-digit {
+  .binary-number {
     display: flex;
     flex-direction: row;
   }

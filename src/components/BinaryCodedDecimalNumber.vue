@@ -1,15 +1,15 @@
 <template lang="pug">
-  .binary-digit
-    .digit(:key="index", v-for="(digit, index) in [tens, ones]")
-      light(:on="!!(digit & (2 ** (4 - i)))", :key="i", v-for="i in 4")
+  .binary-coded-decimal-number
+    binary-number(:bit="4", :number="tens")
+    binary-number(:bit="4", :number="ones")
 </template>
 
 <script>
-  import Light from './Light'
+  import BinaryNumber from './BinaryNumber'
 
   export default {
     components: {
-      Light
+      BinaryNumber
     },
     props: {
       number: {
@@ -29,11 +29,11 @@
 </script>
 
 <style lang="scss" scoped>
-  .binary-digit {
+  .binary-coded-decimal-number {
     display: flex;
     flex-direction: row;
 
-    .digit {
+    .binary-number {
       display: flex;
       flex-direction: column;
     }
