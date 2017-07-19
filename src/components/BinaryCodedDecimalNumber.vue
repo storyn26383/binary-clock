@@ -35,7 +35,7 @@
 
     .binary-number {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
 </style>

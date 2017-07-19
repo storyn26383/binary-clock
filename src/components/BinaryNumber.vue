@@ -1,6 +1,6 @@
 <template lang="pug">
   .binary-number
-    light(:on="!!(number & (2 ** (bit - i)))", :key="i", v-for="i in bit")
+    light(:on="!!(number & (2 ** (i - 1)))", :key="i", v-for="i in bit")
 </template>
 
 <script>
@@ -26,6 +26,6 @@
 <style lang="scss" scoped>
   .binary-number {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 </style>
